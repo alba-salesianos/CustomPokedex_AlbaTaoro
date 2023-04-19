@@ -19,16 +19,29 @@ public class Legendary extends Pokemon {
 
     @Override
     public String toString() {
-        String msg = "\n" + "══════════════════════════════════════════════════════════════";
-        msg += "\n" + this.name.toUpperCase();
-        msg += "\n" + this.type.toUpperCase();
-        msg += "\n" + "HT    " + this.height;
-        msg += "\n" + "WT    " + this.weight + "lb";
-        msg += "\n" + "Location    " + this.location;
-        msg += "\n" + "──█──█──█──█──────────────────────────────────────█──█──█──█──";
-        msg += "\n" + this.description;
-        msg += "\n" + "══════════════════════════════════════════════════════════════";
-        return msg;
+        if (isCaught) {
+            String msg = "\n" + "══════════════════════════════════════════════════════════════";
+            msg += "\n" + this.name.toUpperCase();
+            msg += "\n" + this.type.toUpperCase();
+            msg += "\n" + "HT    " + this.height;
+            msg += "\n" + "WT    " + this.weight + "lb";
+            msg += "\n" + "Location    " + this.location;
+            msg += "\n" + "──█──█──█──█──────────────────────────────────────█──█──█──█──";
+            msg += "\n" + this.description;
+            msg += "\n" + "══════════════════════════════════════════════════════════════";
+            return msg;
+        } else {
+            String msg = "\n" + "══════════════════════════════════════════════════════════════";
+            msg += "\n" + this.name.toUpperCase();
+            msg += "\n" + this.type.toUpperCase();
+            msg += "\n" + "HT    ??????";
+            msg += "\n" + "WT    ??????";
+            msg += "\n" + "Location    " + this.location;
+            msg += "\n" + "──█──█──█──█──────────────────────────────────────█──█──█──█──";
+            msg += "\n" + "??????";
+            msg += "\n" + "══════════════════════════════════════════════════════════════";
+            return msg;
+        }
     }
 
 }
